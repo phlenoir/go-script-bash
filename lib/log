@@ -307,7 +307,7 @@ readonly __GO_LOG_COMMAND_EXIT_PATTERN='^@go.log_command (exit|fatal):([0-9]+)$'
 
   case "$__GO_LOG_TIMESTAMP_IMPL" in
   printf)
-    printf -v __go_log_timestamp "%($_GO_LOG_TIMESTAMP_FORMAT)T"
+    printf -v __go_log_timestamp "%($_GO_LOG_TIMESTAMP_FORMAT)T" -1
     return "$?"
     ;;
   date)
